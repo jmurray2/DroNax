@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar>
+      <!--<button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>-->
+      <ion-title style=" text-align: center; vertical-align: middle">Main Menu
+      </ion-title>
+      <ion-buttons style="float:right;" end>
+        <button ion-button icon-only large class="menu-icon"(click)="toUserPage()">
+            <ion-icon name="ios-contact"></ion-icon>
+        </button>
+    </ion-buttons>
+    </ion-navbar>
+    <ion-buttons text-center>
+        <button block ion-button text-center color="danger" (click)="toEmergencyPage()">Emergency</button>
+    </ion-buttons>
+  </ion-header>
+  <ion-content class="background">
+    <ion-card>
+    <ion-card-header>Information About Overdoses</ion-card-header>
+    <ion-list>
+            <button ion-item *ngFor="let action of this.actions" (click)="isPressed($event, action)">
+              {{action.title}}
+            </button>
+    </ion-list>
+  </ion-card>
+  <ion-card>
+      <ion-card-header>News about Naloxone</ion-card-header>
+      <ion-list>
+              <button ion-item *ngFor="let action of this.actions" (click)="isPressed($event, action)">
+                {{action.title}}
+              </button>
+      </ion-list>
+    </ion-card>
+    
+ </ion-content>

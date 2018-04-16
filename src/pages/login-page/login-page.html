@@ -1,0 +1,38 @@
+
+    
+
+<ion-content class= "background">
+    <p class="main">DroNax</p>
+    <ion-card>
+        
+    <ion-card-content>
+        <ion-list no-line>
+            <ion-item>
+                 <ion-input #username placeholder="Email" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input #password placeholder="Password" type="password"></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button block outline color="light" style="margin-top:20px" (click)="signIn(username.value,password.value)">Sign In</button>
+        <button ion-button clear full style="font-weight:light"color="light" style="margin-top:25px"(click)="createAccount()">Don't have an account? <a> &ensp;Sign up here!</a></button>
+        <!-- <button ion-button block outline color="light" (click)="createAccount()">Create Account</button>-->
+        <!--<button ion-button block outline color="light" (click)="runIntegrationTests()">Run Tests</button>-->
+    </ion-card-content>
+</ion-card>
+    <!--
+    <ion-list style="padding-top:100px">
+    <ion-item>
+        <ion-input #username placeholder="Email" type="text"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-input #password placeholder="Password" type="password"></ion-input>
+    </ion-item>
+    
+    </ion-list>
+    <button ion-button block color="primary2" (click)="signIn(username.value,password.value)">Sign In</button>
+    <button ion-button block color="primary2" (click)="createAccount()">Create Account</button>
+    <button ion-button block color="primary2" (click)="runIntegrationTests()">Run Tests</button>
+    -->
+</ion-content>

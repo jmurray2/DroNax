@@ -1,0 +1,12 @@
+span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+.menu-icon{
+  color:map-get($colors,primary2);
+}
+main-menu-ionic{
+  .background{
+    background-color: map-get($colors, light);;
+  }
+}

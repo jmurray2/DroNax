@@ -1,0 +1,89 @@
+.login-page-title{
+    //height:15vh;
+    /*p{
+        //height:15vh;
+            font-family: 'roboto';
+            font-size: 3.5rem;
+            font-weight: 100;
+            text-align: center;
+            letter-spacing: 0.3rem;
+    }*/
+}
+p{
+    font-size: 5rem;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    vertical-align: bottom;
+    color: white;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 10;
+    display: block;
+    width: 100%;
+}
+
+login-page-ionic{
+
+   //background-color: #e6ebe6;
+   ion-header.header{
+       //color:#339900;
+ 
+   }
+    .background{
+        background-image: url('../assets/imgs/background4.jpg');
+        height: 100%; 
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .scroll-content{
+        align-content: center;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    
+    }
+    ion-card.card {
+        box-shadow: none;
+        background: rgba(0,0,0,0.2);
+        //background:#339900;
+        border-radius: 5px;
+    }
+    a{
+        font-weight: "bold";
+        color: #fff;
+    }
+    ion-card-header.card-header {
+        color: #fff
+    }
+    .list > .item-block:first-child {
+        border: medium none;
+    }
+    .item{
+        margin-bottom: 10px;
+        background: rgba(255,255,255,0.5);
+        //background:white;
+        border: medium none;
+        .text-input{
+            color:#fff;
+        }
+        input::-moz-placeholder {
+            color:#fff !important
+        }
+        input:-moz-placeholder {
+            color:#fff !important
+        }
+        *::-webkit-input-placeholder {
+            color: #fff !important
+        }
+    }
+    .bottom{
+        position:absolute;
+        bottom:0;
+    }
+}

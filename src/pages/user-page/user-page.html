@@ -1,0 +1,59 @@
+<ion-header>
+        <ion-navbar>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <ion-title>
+              User Page
+          </ion-title>
+        </ion-navbar>
+      </ion-header>
+<ion-content>
+
+<h1 ion-text color="text">User Information</h1>
+<ion-item>
+    <ion-label color="primary2" fixed>First Name</ion-label>
+    <ion-input disabled="true" type="tel" placeholder="{{this.service.user.firstName}}"></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label color="primary2" fixed>Last Name</ion-label>
+    <ion-input disabled="true" type="tel" placeholder="{{this.service.user.lastName}}"></ion-input>
+</ion-item>
+
+    <h1 ion-text color="text">Addresses</h1> 
+    <button ion-button icon-only clear class="add-button" style="float:right; vertical-align:middle; padding-top:15px "(click)="addAddress()">
+        <ion-icon name="ios-add-circle-outline"></ion-icon>
+    </button>
+
+
+<!--
+<h1 color="text">Addresses
+    <ion-buttons>
+        <button ion-button icon-only (click)="addAddress()">
+            <ion-icon name="ios-add-circle-outline"></ion-icon>
+        </button>
+    </ion-buttons>
+</h1>
+-->
+
+<ion-item *ngFor="let address of this.service.user.addresses ; let i = index">
+    <ion-label color="primary2" fixed>Address {{i+1}}</ion-label>
+    <ion-input disabled="true" type="tel" placeholder="{{address.address}}"></ion-input>
+</ion-item>
+
+<h1 ion-text color="text">Billing Information</h1>
+<ion-item>
+    <ion-label color="primary2" fixed>Billing Information</ion-label>
+    <ion-input disabled="true" type="tel" placeholder="{{this.service.user.billingInfo}}"></ion-input>
+</ion-item>
+
+    <ion-buttons style="padding-top:20px" text-center>
+        <button ion-button text-center round outline color="danger" (click)=signOut()>Sign Out</button>
+    </ion-buttons>
+
+    <ion-buttons text-center>
+        <button ion-button round outline color="danger" (click)=deleteAccount()>Delete Account</button>
+    </ion-buttons>
+
+</ion-content>

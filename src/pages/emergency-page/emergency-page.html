@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Emergency Page
+    </ion-title>
+    
+    <!--<ion-buttons end>
+      <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
+    </ion-buttons> -->
+  </ion-navbar>
+  <ion-toolbar style="left: 0;"color="primary2">
+      <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Search for a place"></ion-searchbar>
+        
+    </ion-toolbar>
+    <ion-list style=""[hidden]="autocompleteItems.length == 0">
+        <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+          {{ item.description }}
+        </ion-item>
+    </ion-list>
+</ion-header>
+ 
+<ion-content>
+  
+  <!--<input id="pac-input" class="controls" type="text" placeholder="Search Box" style="width:100%">-->
+  <!--<div style="width:100%; height:75%" #map="" id="map"></div> -->
+  
+  <div id='map' style="height:100%;position:fixed;top:0;bottom:0;"></div>
+  <div style="width:100%;display: inline; align-content: center;position: fixed;bottom: 0;">
+    <button block *ngIf="this.sendDrone" ion-button color="danger" (click)="confirmDrone()">Send Drone to Marker Location</button>
+    <button ion-button color="primary2" (click)="getCurrentLocation()"style="font-size:12px;width:45%;white-space: normal;">Current Location</button>
+    <button ion-button color="primary2" (click)="sendToDefault()"style="font-size:12px;width:45%;white-space: normal; float:right">Default Address</button>
+  </div>
+</ion-content>
+

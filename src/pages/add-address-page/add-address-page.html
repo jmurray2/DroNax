@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Add Address</ion-title>
+    </ion-navbar>
+    <ion-toolbar style="left: 0;"color="primary2">
+         <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Search for a place"></ion-searchbar>
+    </ion-toolbar>
+    <ion-list [hidden]="autocompleteItems.length == 0">
+        <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+            {{ item.description }}
+        </ion-item>
+    </ion-list>
+</ion-header>
+<ion-content>
+    <div id='map' style="height:100%; position:fixed; top:0"></div>
+    <div style="width:100%;display: inline; align-content: center;position: fixed;bottom: 0;">
+        <button ion-button [hidden]="this.markers.length == 0" color="primary2" (click)="setAddress()"style="font-size:12px;width:45%;white-space: normal;">Marker Location</button>
+    </div>
+</ion-content>

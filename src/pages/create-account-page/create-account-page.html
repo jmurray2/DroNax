@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Create Account Page</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label color="primary2" stacked>Username</ion-label>
+        <ion-input #username type="username" placeholder="Username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary2" stacked>Email</ion-label>
+        <ion-input #email type="email" placeholder="Email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary2" stacked>Password</ion-label>
+        <ion-input #password type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+    <div class="wrapper">
+        <button class="button1"ion-button color="primary2" (click)="createAccount(username.value,email.value,password.value)">
+                Create Account
+        </button>
+    </div>
+</ion-content>
